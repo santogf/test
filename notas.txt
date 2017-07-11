@@ -1,0 +1,73 @@
+git add [file or directory]
+git commit -m "mensaje"
+git status
+
+
+git branch -d experimental
+borra rama
+git checkout -b experimental2
+para crear rama
+git checkout master
+para regresar a la rama principal
+git merge experimental
+
+git commit -am "asdasd" --amend <- para rectificar commit, solo en el último commit
+
+para hacer un rebase ,. primero hay que hacer un checkout desde la rama que deseas poner adelante
+después, git rebase master
+pero master se queda en su commit, entonces hay que hacer
+git checkout master
+y depsués
+git merge ramabase , para juntarlos con fast forward
+
+git commit -am "" para saltarse el git add
+
+git commit -m "" --amend para sustituir el último commit
+
+git chekcout no.commit
+
+git log -p, para ver los cambios en pantalla
+
+git log --graph --oneline --decorate
+
+git log --author= "asd"
+
+git log --grep = ""
+
+git commit -m "Nombre  del commit" --amend     (Sustituye el ultimo commit)
+
+git log --oneline     (Te muestra el id commit y el titulo del commit)
+git log --decorate     (Te muestra donde se encuentra el head point en el log)
+git log --stat        (Explica el numero de lineas que se cambiaron brevemente)
+git log -p            (Explica el numero de lineas que se cambiaron y te muestra que se cambio en el contenido)
+git shortlog        (Indica que commits a realizado un usuario, mostrando el usuario y el titulo de sus commits)
+git log --graph --oneline --decorate
+git log pretty=format:"%cn hizo un commit %h el dia %cd" (Muestar mensajes perzonalizados de los commits)
+git log -3            (Limitamos el numero de commits)
+git log --after="2016-1-2"
+git log --after="today"
+git log --after="2016-1-2" --before="today" (Commits para localizar por fechas)
+git log --author="Santiago Iván" (commits por autor que cumplan con las letras)
+git log --grep="FOOTER" (Busca los commits que cumplan tal cual esta escrito entre las comillas)
+git log --grep="FOOTER" -i (Busca los commits que cumplan sin importar mayusculas o minusculas)
+git log -- index.html (Busca los commits en un archivo en especifico)
+git log -S"Por contenido" (Buscar los commits con el contenido dentro del archivo)
+
+github--
+
+git clone [repositorio viá ssh o https]
+
+git remote add origin(nombre) https://github.com/gustavofelixcab/ejercicio.git
+
+git push origin master
+
+git remote -v para ver los remotos
+
+git remote add origin [ssh]
+git fetch origin <- se descargar en origin/master
+git merge origin/master<-primero se descarga a origin/master, por lo que hay que hacer merge a master(de github)
+***desarrollamos***
+git fetch origin
+git merge origin/master
+git push origin master
+0820 django
