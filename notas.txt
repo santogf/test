@@ -2,6 +2,7 @@ git add [file or directory]
 git commit -m "mensaje"
 git status
 
+https://aws.amazon.com/es/premiumsupport/knowledge-center/connect-to-linux-desktop-from-windows/
 
 git branch -d experimental
 borra rama
@@ -70,4 +71,16 @@ git merge origin/master<-primero se descarga a origin/master, por lo que hay que
 git fetch origin
 git merge origin/master
 git push origin master
-0820 django
+
+"forked"
+
+git remote add origin [ssh https del forked]
+git remote add upstream [ssh o https del principal]
+git fetch upstream
+git merge origin/upstream
+git fetch origin
+git merge origin/master
+hacer cambios en local
+git fetch upstream
+git merge origin/upstream
+git push origin master
